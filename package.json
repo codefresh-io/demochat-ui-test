@@ -17,6 +17,7 @@
   },
 
   "scripts": {
+    "postinstall": "./node_modules/protractor/bin/webdriver-manager update",
     "start" : "./node_modules/protractor/bin/webdriver-manager start",
     "test" : "./node_modules/protractor/bin/protractor conf.js"
   }
