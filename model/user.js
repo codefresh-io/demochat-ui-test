@@ -91,7 +91,7 @@ var register = function (callback) {
         btnRegister.click();
         callback();
     }, function () {
-        //callback();
+        callback();
     });
 };
 
@@ -100,6 +100,7 @@ var signIn = function (callback) {
         return browser.driver.isElementPresent(by.xpath(constant.XPATH_LOGIN_FORM));
     }, constant.DEFAULT_TIMEOUT).then(
         function () {
+            helper.sleep(1000);
             console.log('Input username: ' + self.username);
             var username = helper.findElement(by.name('username'));
             username.sendKeys(self.username);
